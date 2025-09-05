@@ -13,13 +13,11 @@ public class ProtectedController {
     }
 
     @GetMapping("/admin")
-    @PreAuthorize("hasRole('ADMIN')")
     public String adminOnly() {
         return "Admin endpoint!";
     }
 
     @GetMapping("/user")
-    @PreAuthorize("hasRole('USER')")
     public String userOnly() {
         return "User endpoint!";
     }
